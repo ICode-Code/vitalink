@@ -2,7 +2,9 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
+import 'package:vitalink/app/routes/vt_route_address.dart';
 import 'package:vitalink/core/constants/colors.dart';
 import 'package:vitalink/core/widgets/docBottomNavigationBar/doc_bottom_navigation_button.dart';
 import 'package:vitalink/core/widgets/docBottomNavigationBar/doc_bottom_navigation_conrtoller.dart';
@@ -40,9 +42,12 @@ class DocBottomNaviagtion extends ConsumerWidget {
             children: [
               DocBottomNavigationButton(
                 type: BottomNavTabs.home,
-                onPress: () => ref
-                    .read(activeBottomNavigationBarProvider.notifier)
-                    .update((_) => BottomNavTabs.home),
+                onPress: () {
+                  ref
+                      .read(activeBottomNavigationBarProvider.notifier)
+                      .update((_) => BottomNavTabs.home);
+                  context.go(VtRouteAddress.vtRouteHome);
+                },
                 isActive: activeTabType == BottomNavTabs.home,
                 label: "App",
                 defaultIcon: PhosphorIconsBold.squaresFour,
@@ -50,9 +55,12 @@ class DocBottomNaviagtion extends ConsumerWidget {
               ),
               DocBottomNavigationButton(
                 type: BottomNavTabs.myPill,
-                onPress: () => ref
-                    .read(activeBottomNavigationBarProvider.notifier)
-                    .update((_) => BottomNavTabs.myPill),
+                onPress: () {
+                  ref
+                      .read(activeBottomNavigationBarProvider.notifier)
+                      .update((_) => BottomNavTabs.myPill);
+                  context.go(VtRouteAddress.vtClientPill);
+                },
                 isActive: activeTabType == BottomNavTabs.myPill,
                 label: "My Pill",
                 defaultIcon: PhosphorIconsBold.pill,
@@ -80,9 +88,13 @@ class DocBottomNaviagtion extends ConsumerWidget {
               ),
               DocBottomNavigationButton(
                 type: BottomNavTabs.profiles,
-                onPress: () => ref
-                    .read(activeBottomNavigationBarProvider.notifier)
-                    .update((_) => BottomNavTabs.profiles),
+                onPress: () {
+                  ref
+                      .read(activeBottomNavigationBarProvider.notifier)
+                      .update((_) => BottomNavTabs.profiles);
+
+                  context.go(VtRouteAddress.vtRouteSignIn);
+                },
                 isActive: activeTabType == BottomNavTabs.profiles,
                 label: "Profile",
                 defaultIcon: PhosphorIconsBold.userCircle,

@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:vitalink/features/Hospital/presentation/widget/hospital_card.dart';
+import 'package:vitalink/features/vtHospital/presentation/widget/hospital_card.dart';
 
 class HospitalCardViewWrapper extends StatelessWidget {
   @override

@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:vitalink/core/constants/typo.dart';
 import 'package:vitalink/core/widgets/doc_button_secondary.dart';
-import 'package:vitalink/features/dashboard/controller/dashboard_controller.dart';
+import 'package:vitalink/features/vtDashboard/controller/dashboard_controller.dart';
 
 class ServiceMenu extends ConsumerWidget {
   @override

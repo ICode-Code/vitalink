@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vitalink/features/Physician/presentation/widget/physician_card.dart';
+import 'package:vitalink/features/vtPhysician/presentation/widget/physician_card.dart';
 
 class PhysicianPreview extends StatelessWidget {
   @override

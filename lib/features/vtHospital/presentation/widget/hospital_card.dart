@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:vitalink/core/constants/colors.dart';
 import 'package:vitalink/core/widgets/doc_button_primary.dart';
-import 'package:vitalink/features/Physician/presentation/widget/physician_info.dart';
+import 'package:vitalink/features/vtPhysician/presentation/widget/physician_info.dart';
 
 class HospitalCard extends StatelessWidget {
   @override
