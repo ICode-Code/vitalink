@@ -14,7 +14,7 @@ class DocButtonSecondary extends StatelessWidget {
   final bool isActive;
 
   const DocButtonSecondary({
-    Key? key,
+    super.key,
     required this.lable,
     required this.onPress,
     this.isLoading = false,
@@ -23,7 +23,7 @@ class DocButtonSecondary extends StatelessWidget {
     this.height,
     required this.icon,
     this.isActive = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -8,11 +8,11 @@ class PhysicianInfo extends StatelessWidget {
   final String detail;
 
   const PhysicianInfo({
-    Key? key,
+    super.key,
     required this.title,
     required this.icon,
     required this.detail,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -14,7 +14,7 @@ class DocButtonPrimary extends StatelessWidget {
   final double? height;
   final IconData? icon;
   const DocButtonPrimary({
-    Key? key,
+    super.key,
     required this.lable,
     this.onPress,
     this.isLoading = false,
@@ -22,7 +22,7 @@ class DocButtonPrimary extends StatelessWidget {
     this.width,
     this.height,
     required this.icon,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

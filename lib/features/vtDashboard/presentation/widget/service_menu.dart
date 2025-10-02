@@ -6,6 +6,8 @@ import 'package:vitalink/core/widgets/doc_button_secondary.dart';
 import 'package:vitalink/features/vtDashboard/controller/dashboard_controller.dart';
 
 class ServiceMenu extends ConsumerWidget {
+  const ServiceMenu({super.key});
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final activeTab = ref.watch(serviceMenuController);

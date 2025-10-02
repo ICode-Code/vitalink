@@ -12,14 +12,14 @@ class DocBottomNavigationButton extends StatelessWidget {
   final BottomNavTabs type;
 
   const DocBottomNavigationButton({
-    Key? key,
+    super.key,
     required this.label,
     required this.defaultIcon,
     required this.activeIcon,
     required this.onPress,
     required this.type,
     this.isActive = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

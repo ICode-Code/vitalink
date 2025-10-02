@@ -4,7 +4,7 @@ import 'package:vitalink/core/constants/colors.dart';
 import 'package:vitalink/core/constants/typo.dart';
 
 class DocAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const DocAppBar({Key? key}) : super(key: key);
+  const DocAppBar({super.key});
   @override
   Widget build(BuildContext context) {
     return AppBar(

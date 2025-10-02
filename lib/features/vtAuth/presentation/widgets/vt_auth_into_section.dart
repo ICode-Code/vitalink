@@ -1,11 +1,18 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+import 'package:vitalink/app/routes/vt_route_address.dart';
 import 'package:vitalink/core/constants/colors.dart';
 import 'package:vitalink/core/constants/typo.dart';
+import 'package:vitalink/core/widgets/docBottomNavigationBar/doc_bottom_navigation_conrtoller.dart';
 
-class VtAuthIntroSection extends StatelessWidget {
+class VtAuthIntroSection extends ConsumerWidget {
+  const VtAuthIntroSection({super.key});
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     Size extent = MediaQuery.of(context).size;
+    final activeBarType = ref.watch(activeBottomNavigationBarProvider);
 
     return Container(
       width: extent.width,
@@ -29,12 +36,20 @@ class VtAuthIntroSection extends StatelessWidget {
             top: 30,
             child: Padding(
               padding: EdgeInsetsGeometry.all(10),
-              child: Text(
-                "Skip",
-                style: TextStyle(
-                  color: AppThemeColor.greenLight,
-                  fontFamily: AppTypography.text_family,
-                  fontSize: 16,
+              child: GestureDetector(
+                onTap: () {
+                  context.go(VtRouteAddress.vtRouteHome);
+                  ref
+                      .read(activeBottomNavigationBarProvider.notifier)
+                      .update((_) => BottomNavTabs.home);
+                },
+                child: Text(
+                  "Skip",
+                  style: TextStyle(
+                    color: AppThemeColor.greenLight,
+                    fontFamily: AppTypography.text_family,
+                    fontSize: 16,
+                  ),
                 ),
               ),
             ),

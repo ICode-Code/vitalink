@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:vitalink/core/constants/colors.dart';
 
 class pp_ButtonLoading extends StatelessWidget {
+  const pp_ButtonLoading({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(

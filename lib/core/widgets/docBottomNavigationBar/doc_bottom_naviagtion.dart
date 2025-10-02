@@ -10,6 +10,8 @@ import 'package:vitalink/core/widgets/docBottomNavigationBar/doc_bottom_navigati
 import 'package:vitalink/core/widgets/docBottomNavigationBar/doc_bottom_navigation_conrtoller.dart';
 
 class DocBottomNaviagtion extends ConsumerWidget {
+  const DocBottomNaviagtion({super.key});
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final activeTabType = ref.watch(activeBottomNavigationBarProvider);

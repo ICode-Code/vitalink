@@ -5,6 +5,8 @@ import 'package:vitalink/core/constants/colors.dart';
 import 'package:vitalink/core/constants/typo.dart';
 
 class ProgressCard extends StatelessWidget {
+  const ProgressCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return InkWell(

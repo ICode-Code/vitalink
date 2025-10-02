@@ -7,6 +7,8 @@ import 'package:vitalink/core/widgets/doc_button_primary.dart';
 import 'package:vitalink/features/vtPhysician/presentation/widget/physician_info.dart';
 
 class HospitalCard extends StatelessWidget {
+  const HospitalCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ClipRRect(

@@ -3,6 +3,8 @@ import 'package:vitalink/core/constants/colors.dart';
 import 'package:vitalink/core/constants/typo.dart';
 
 class VtButtonAuth extends StatelessWidget {
+  const VtButtonAuth({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -10,14 +12,20 @@ class VtButtonAuth extends StatelessWidget {
         borderRadius: BorderRadius.circular(7),
         boxShadow: [
           BoxShadow(
-            color: Color.fromRGBO(0, 0, 0, 0.45),
-            blurRadius: 20,
-            spreadRadius: -20,
-            offset: Offset(0, 25),
+            color: Color.fromRGBO(0, 0, 0, 0.12),
+            blurRadius: 3,
+            spreadRadius: 0,
+            offset: Offset(0, 1),
+          ),
+          BoxShadow(
+            color: Color.fromRGBO(0, 0, 0, 0.24),
+            blurRadius: 2,
+            spreadRadius: 0,
+            offset: Offset(0, 1),
           ),
         ],
         gradient: LinearGradient(
-          colors: [AppThemeColor.greenPrime, AppThemeColor.greenSecondary],
+          colors: [AppThemeColor.greenPrime, AppThemeColor.greenPrime],
           begin: AlignmentGeometry.topLeft,
           end: AlignmentGeometry.bottomRight,
         ),
@@ -28,7 +36,7 @@ class VtButtonAuth extends StatelessWidget {
           child: Text(
             "Sign In",
             style: TextStyle(
-              fontSize: 15,
+              fontSize: 16,
               color: AppThemeColor.darkDefault,
               fontFamily: AppTypography.text_family,
               fontWeight: FontWeight.bold,
